@@ -181,6 +181,7 @@ string cardReader::getPhoneNumber()
 	//loop to take out any alpha characters in case of TEL: xxx-xxx-xxxx
 	phoneNumber.erase(remove_if(phoneNumber.begin(), phoneNumber.end(), ::isalpha), phoneNumber.end());
 	phoneNumber.erase(remove_if(phoneNumber.begin(), phoneNumber.end(), ::ispunct), phoneNumber.end());
+	phoneNumber.erase(remove_if(phoneNumber.begin(), phoneNumber.end(), ::isspace), phoneNumber.end());
 
 
 	//add the - in correct spots
